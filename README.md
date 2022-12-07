@@ -47,9 +47,13 @@ $$
 $$
 
 T<sub>2s/3s</sub>为坐标变换矩阵
+
+
 $$
 T_{2S/3S}=T^{-1}_{3S/2S}=\begin{bmatrix} 1 & 0 & \frac{\sqrt{2}}{2} \\ -\frac{1}{2} & \frac{\sqrt{3}}{2} & -\frac{\sqrt{2}}{2} \\ -\frac{1}{2} & -\frac{\sqrt{3}}{2} &\frac{\sqrt{2}}{2} \\ \end{bmatrix}
 $$
+
+
 <img src=".\README.assets\image-20221205095704804.png" alt="image-20221205095704804" style="zoom:67%;" />
 
 ```c
@@ -110,20 +114,30 @@ void Anti_Park_cal(void)
 ## 3.内置式三相PMSM电机方程（d-q坐标系）
 
 定子电压方程
+
+
 $$
 \begin{cases}
 u_d=Ri_d+\frac{d}{dt}\psi_d-\omega_e\psi_q\\
 u_q=Ri_d+\frac{d}{dt}\psi_q+\omega_e\psi_d
 \end{cases}
 $$
+
+
 定子磁链方程
+
+
 $$
 \begin{cases}
 \psi_d=L_d+\psi_f\\
 \psi_q=L_qi_q
 \end{cases}
 $$
+
+
 定子电压方程
+
+
 $$
 \begin{cases}
 u_d=Ri_d+L_d\frac{d}{dt}i_d-\omega_eL_qi_q\\
@@ -137,11 +151,19 @@ R-定子的电阻；\psi_d、\psi_q-定子磁链的d-q轴分量；\omega_e-电�
 L_d、L_q-d-q轴电感电量；\psi_f-永磁体磁链
 $$
 
+
+
 电磁转矩方程
+
+
 $$
 T_e=\frac{3}{2}p_ni_q[i_d(L_d-L_q)+\psi_f]
 $$
+
+
 关系式
+
+
 $$
 \begin{cases}
 \omega_e=n_p\omega_m\\
@@ -154,9 +176,13 @@ $$
 \omega_m-电机机械角度rad/s；N_r-电机转速r/min
 $$
 
+
+
 ## 4.三相电压矢量表示
 
 假设三相对称正弦相电压的瞬时值为
+
+
 $$
 \begin{cases}
 u_a=U_msin\omega t\\
@@ -165,9 +191,11 @@ u_c=U_msin(\omega t+\frac{2}{3}\pi)
 \end{cases}
 $$
 
+
 $$
 U_m-相电压的幅值；\omega=2\pi f-相电压的角频率
 $$
+
 
 $$
 U_{out}=u_a+au_b+a^2u_c\\
@@ -177,6 +205,7 @@ Im~U_{out}=u_bsin\frac{2}{3}\pi+u_csin(-\frac{2}{3}\pi)=-\frac{3}{2}U_mcos\omega
 \end{cases}\\
 U_{out}=Re~U_{out}+jIm~U_{out}=\frac{3}{2}U_me^{j(\omega t-\frac{\pi}{2})}
 $$
+
 
 <img src=".\README.assets\image-20221205115404283.png" alt="image-20221205115404283" style="zoom:67%;" />
 $$
