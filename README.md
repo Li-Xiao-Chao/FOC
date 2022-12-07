@@ -15,6 +15,8 @@ $$
 $$
 
 f代表电机的电压、电流或磁链等变量；T<sub>3s/2s</sub>为坐标变换矩阵
+
+
 $$
 T_{3S/2S}=k\begin{bmatrix} 1 & -\frac{1}{2} & -\frac{1}{2} \\ 0 & \frac{\sqrt{3}}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} &\frac{\sqrt{2}}{2} \\ \end{bmatrix}\\
 幅值不变k=\frac{2}{3}\\
@@ -22,7 +24,11 @@ T_{3S/2S}=k\begin{bmatrix} 1 & -\frac{1}{2} & -\frac{1}{2} \\ 0 & \frac{\sqrt{3}
 三相对称系统，静止坐标系中f_0可忽略
 $$
 
+
+
 <img src=".\README.assets\image-20221205095333937.png" alt="image-20221205095333937" style="zoom: 80%;" />
+
+
 
 ```c
 void Clark_cal(void)
