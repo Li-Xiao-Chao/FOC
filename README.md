@@ -374,11 +374,11 @@ void XYZ_step(void)
 }
 ```
 
-如果T<sup>''</sup>+T<sup>''</sup> > T<sub>s</sub>，则需进行过调制处理：
+如果T<sup>'</sup>+T<sup>''</sup> > T<sub>s</sub>，则需进行过调制处理：
 
 $$
 \begin{cases}
-T^`=\frac{T^'}{T^'+T^{''}}T_s\\
+T^'=\frac{T^'}{T^'+T^{''}}T_s\\
 T^{''}=\frac{T^{''}}{T^'+T^{''}}T_s
 \end{cases}
 $$
