@@ -505,12 +505,15 @@ void Tcm_cal(void)
 
 三相PMSM电机运动方程：
 
+
 $$
 \begin{cases}
 J\frac{d\omega_m}{dt}=T_e-T_L-B\omega_m\\
 T_e=\frac{3}{2}p_ni_d[i_d(L_d-L_q)+\psi_f]
 \end{cases}
 $$
+
+
 ω<sub>m</sub>-电机的机械角速度；J-转动惯量；B-阻尼系数；T<sub>L</sub>-负载转矩
 
 定义有功阻尼：
@@ -549,7 +552,10 @@ K_{i\omega}=\beta K_{p\omega}
 $$
 
 
+
 ![image-20221206175333122](.\README.assets\image-20221206175333122.png)
+
+
 
 
 ```c
@@ -604,7 +610,7 @@ $$
 
 $$
 \pmb{Y}(s)=\pmb{G}(s)\pmb{U}(s)\\
-\pmb{U}(s)=\begin{bmatrix}u_{d0}(s)\\u_{q0}(s)\end{bmatrix},\pmb{Y}(s)=\begin{bmatrix}i_d(s)\\i_q(s)\end{bmatrix},	\pmb{G}(s)=\begin{bmatrix}R+sL_d&0\\0&R+sL_q\end{bmatrix}^{-1}
+\pmb{U}(s)=\begin{bmatrix}u_{d0}(s)\\\\u_{q0}(s)\end{bmatrix},\pmb{Y}(s)=\begin{bmatrix}i_d(s)\\\\i_q(s)\end{bmatrix},\pmb{G}(s)=\begin{bmatrix}R+sL_d&0\\\\0&R+sL_q\end{bmatrix}^{-1}
 $$
 
 采用常规的PI调节器并结合前馈解耦控制策略，可得到d-q轴的电压：
@@ -625,11 +631,12 @@ $$
 $$
 
 
+
 ![image-20221206202847141](.\README.assets\image-20221206202847141.png)
 
 
-其等效控制器为：
 
+其等效控制器为：
 $$
 \pmb{F}(s)=[\pmb{I}-\pmb{C}(s)\hat{\pmb{G}}(s)]^{-1}\pmb{C}(s)
 $$
@@ -658,7 +665,7 @@ $$
 内模控制器：
 
 $$
-\pmb{F}(s)=\alpha\begin{bmatrix}L_d+\frac{R}{s}&0\\0&L_q+\frac{R}{s}\end{bmatrix}\\
+\pmb{F}(s)=\alpha\begin{bmatrix}L_d+\frac{R}{s}&0\\\\0&L_q+\frac{R}{s}\end{bmatrix}\\
 \pmb{G}_c(s)=\frac{\alpha}{s+\alpha}\pmb{I}
 $$
 
