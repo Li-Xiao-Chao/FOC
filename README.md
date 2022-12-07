@@ -686,14 +686,19 @@ $$
 其中，K<sub>pd</sub>和K<sub>pd</sub>为控制器的比例增益，K<sub>id</sub>和K<sub>id</sub>为PI控制器的控制增益
 
 内模控制框图：
+
+
 $$
 \pmb{G}(s)为内模，\pmb{G}(s)为被控对象，\pmb{C}(s)为内模控制器
 $$
 
+
+
 <img src=".\README.assets\image-20221206202847141.png" alt="image-20221206202847141" style="zoom:80%;" />
 
-其等效控制器为：
 
+
+其等效控制器为：
 
 $$
 \pmb{F}(s)=\begin{bmatrix}\pmb{I}-\pmb{C}(s)\hat{\pmb{G}}(s)\end{bmatrix}^{-1}\pmb{C}(s)
