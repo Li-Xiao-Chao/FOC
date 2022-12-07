@@ -326,6 +326,7 @@ void Sector_cal(void)
  ### 矢量作用时间
 
 
+
 ![image-20221206102731904](.\README.assets\image-20221206102731904.png)
 
 
@@ -380,15 +381,20 @@ void XYZ_step(void)
 
 如果T<sup>'</sup>+T<sup>''</sup> > T<sub>s</sub>，则需进行过调制处理：
 
-$$
 
+
+$$
 \begin{cases}
 T^{'}=\frac{T^{'}}{T^{'}+T^{''}}T_s\\
 T^{''}=\frac{T^{''}}{T^{'}+T^{''}}T_s
 \end{cases}
 $$
 
+
+
 <img src=".\README.assets\image-20221206121420940.png" alt="image-20221206121420940" style="zoom: 50%;" />
+
+
 
 ```c
 void T1T2_cal(void)
