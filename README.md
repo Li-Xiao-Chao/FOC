@@ -326,6 +326,7 @@ void Sector_cal(void)
  ### 矢量作用时间
 
 ![image-20221206102731904](.\README.assets\image-20221206102731904.png)
+
 $$
 \begin{cases}
 u_\alpha=\frac{T_4}{T_s}|U_4|+\frac{T_6}{T_s}|U_6|cos\frac{\pi}{3}\\
@@ -349,6 +350,7 @@ Z=\frac{\sqrt{3}T_s}{2U_{dc}}(-\sqrt{3}u_\alpha+u_\beta)
 $$
 
 <img src=".\README.assets\image-20221206121352481.png" alt="image-20221206121352481" style="zoom:67%;" />
+
 
 | 扇区          | Ⅰ    | Ⅱ    | Ⅲ    | Ⅳ    | Ⅴ    | Ⅵ    |
 | ------------- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -537,7 +539,9 @@ K_{i\omega}=\beta K_{p\omega}
 \end{cases}
 $$
 
+
 ![image-20221206175333122](.\README.assets\image-20221206175333122.png)
+
 
 ```c
 void Speed_PI(void)
@@ -611,7 +615,9 @@ $$
 \pmb{G}(s)为内模，\pmb{G}(s)为被控对象，\pmb{C}(s)为内模控制器
 $$
 
+
 ![image-20221206202847141](.\README.assets\image-20221206202847141.png)
+
 
 其等效控制器为：
 
@@ -664,7 +670,10 @@ T_d=\frac{L_d}{R}\\
 T_q=\frac{L_q}{R}
 \end{cases}
 $$
+
+
 <img src=".\README.assets\image-20221206212947960.png" alt="image-20221206212947960" style="zoom:67%;" />
+
 
 ```c
 void Iq_PI(void)
