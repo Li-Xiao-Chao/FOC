@@ -374,12 +374,12 @@ void XYZ_step(void)
 }
 ```
 
-如果T<sup>`</sup>+T<sup>``</sup>>T<sub>s</sub>，则需进行过调制处理：
+如果T<sup>''</sup>+T<sup>''</sup> > T<sub>s</sub>，则需进行过调制处理：
 
 $$
 \begin{cases}
-T^`=\frac{T^`}{T^`+T^{``}}T_s\\
-T^{``}=\frac{T^{``}}{T^`+T^{``}}T_s
+T^`=\frac{T^'}{T^'+T^{''}}T_s\\
+T^{''}=\frac{T^{''}}{T^'+T^{''}}T_s
 \end{cases}
 $$
 
@@ -430,9 +430,9 @@ void T1T2_cal(void)
 
 $$
 \begin{cases}
-T_a=(T_s-T^`-T^{``})/4\\
-T_b=T_a+T^`/2\\
-T_c=T_b+T^{``}/2
+T_a=(T_s-T^'-T^{''})/4\\
+T_b=T_a+T^'/2\\
+T_c=T_b+T^{''}/2
 \end{cases}
 $$
 
@@ -512,7 +512,6 @@ $$
 
 $$
 \frac{d\omega_m}{dt}=\frac{1.5p_n\psi_f}{J}(i^`_q-B_a\omega_m)-\frac{B}{J}\omega_m
-
 $$
 
 将上式的极点配置到期望的闭环带宽β，可以得到转速相对于q轴电流的传递函数为：
