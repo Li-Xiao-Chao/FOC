@@ -2,9 +2,9 @@
 
 参考自《现代永磁同步电机控制原理及MATLAB仿真》袁雷编著
 
-<img src=".\README.assets\image-20221206171437211.png" alt="image-20221206171437211" style="zoom: 50%;" />
+<img src="README.assets\image-20221206171437211.png" alt="image-20221206171437211" style="zoom: 50%;" />
 
-<img src=".\README.assets\image-20221206214923151.png" alt="image-20221206214923151" style="zoom: 67%;" />
+<img src="README.assets\image-20221206214923151.png" alt="image-20221206214923151" style="zoom: 67%;" />
 
 ## 1.Clark变换
 
@@ -41,7 +41,7 @@ $$
 
 
 
-<img src=".\README.assets\image-20221205095333937.png" alt="image-20221205095333937" style="zoom: 80%;" />
+<img src="README.assets\image-20221205095333937.png" alt="image-20221205095333937" style="zoom: 80%;" />
 
 
 
@@ -69,7 +69,7 @@ T_{2S/3S}=T^{-1}_{3S/2S}=\begin{bmatrix} 1 & 0 & \frac{\sqrt{2}}{2} \\\\ -\frac{
 $$
 
 
-<img src=".\README.assets\image-20221205095704804.png" alt="image-20221205095704804" style="zoom:67%;" />
+<img src="README.assets\image-20221205095704804.png" alt="image-20221205095704804" style="zoom:67%;" />
 
 ```c
 static void Anti_Clark_cal(void)
@@ -94,7 +94,7 @@ $$
 T_{2S/2r}=\begin{bmatrix} cos\theta_e & sin\theta_e \\\\ -sin\theta_e & cos\theta_e \end{bmatrix}
 $$
 
-<img src=".\README.assets\image-20221205101922158.png" alt="image-20221205101922158" style="zoom:67%;" />
+<img src="README.assets\image-20221205101922158.png" alt="image-20221205101922158" style="zoom:67%;" />
 
 ```c
 void Plark_cal(void)
@@ -114,7 +114,7 @@ $$
 T_{2r/2s}=T^{-1}_{2s/2r}=\begin{bmatrix} cos\theta_e & -sin\theta_e \\\\ sin\theta_e & cos\theta_e \end{bmatrix}
 $$
 
-<img src=".\README.assets\image-20221205102139385.png" alt="image-20221205102139385" style="zoom:67%;" />
+<img src="README.assets\image-20221205102139385.png" alt="image-20221205102139385" style="zoom:67%;" />
 
 ```c
 void Anti_Park_cal(void)
@@ -235,7 +235,7 @@ $$
 
 
 
-<img src=".\README.assets\image-20221205115404283.png" alt="image-20221205115404283" style="zoom:67%;" />
+<img src="README.assets\image-20221205115404283.png" alt="image-20221205115404283" style="zoom:67%;" />
 
 
 $$
@@ -263,7 +263,7 @@ $$
 |       0       |       1       |       1       | -2U<sub>dc</sub>/3 |  U<sub>dc</sub>/3  |  U<sub>dc</sub>/3  | -U<sub>dc</sub> |        0        | U<sub>dc</sub>  |  2/3U<sub>dc</sub>e<sup>jπ</sup>   |
 |       1       |       1       |       1       |         0          |         0          |         0          |        0        |        0        |        0        |                 0                  |
 
-<img src=".\README.assets\image-20221205180755310.png" alt="image-20221205180755310" style="zoom:67%;" />
+<img src="README.assets\image-20221205180755310.png" alt="image-20221205180755310" style="zoom:67%;" />
 
 
 
@@ -294,14 +294,14 @@ $$
 
 
 
-<img src=".\README.assets\image-20221205204109307.png" alt="image-20221205204109307" style="zoom:80%;" />
+<img src="README.assets\image-20221205204109307.png" alt="image-20221205204109307" style="zoom:80%;" />
 
 $$
 |U_4|=|U_6|=\frac{2}{3}U_{dc}\\
 $$
 
 $$
-|U_{out}|=U_m\
+|U_{out}|=U_m
 $$
 
 $$
@@ -326,12 +326,12 @@ SVPWM调制中，调制深度最大值可以达到1.1547，比SPWM调制最高�
 
 | U<sub>out</sub>所在位置 |  开关切换顺序   |                          三相波形图                          |
 | :---------------------: | :-------------: | :----------------------------------------------------------: |
-|      Ⅰ区(0°≤θ≤60°)      | 0→4→6→7→7→6→4→0 | <img src=".\README.assets\image-20221205214059385.png" alt="image-20221205214059385" style="zoom: 67%;" /> |
-|     Ⅱ区(60°≤θ≤120°)     | 0→2→6→7→7→6→2→0 | <img src=".\README.assets\image-20221205214145721.png" alt="image-20221205214145721" style="zoom:67%;" /> |
-|    Ⅲ区(120°≤θ≤180°)     | 0→2→3→7→7→3→2→0 | <img src=".\README.assets\image-20221205214218434.png" alt="image-20221205214218434" style="zoom:67%;" /> |
-|    Ⅳ区(180°≤θ≤240°)     | 0→1→3→7→7→3→1→0 | <img src=".\README.assets\image-20221205214236690.png" alt="image-20221205214236690" style="zoom:67%;" /> |
-|    Ⅴ区(240°≤θ≤300°)     | 0→1→5→7→7→5→1→0 | <img src=".\README.assets\image-20221205214255778.png" alt="image-20221205214255778" style="zoom:67%;" /> |
-|    Ⅵ区(300°≤θ≤360°)     | 0→4→5→7→7→5→4→0 | <img src=".\README.assets\image-20221205214311499.png" alt="image-20221205214311499" style="zoom:67%;" /> |
+|      Ⅰ区(0°≤θ≤60°)      | 0→4→6→7→7→6→4→0 | <img src="README.assets\image-20221205214059385.png" alt="image-20221205214059385" style="zoom: 67%;" /> |
+|     Ⅱ区(60°≤θ≤120°)     | 0→2→6→7→7→6→2→0 | <img src="README.assets\image-20221205214145721.png" alt="image-20221205214145721" style="zoom:67%;" /> |
+|    Ⅲ区(120°≤θ≤180°)     | 0→2→3→7→7→3→2→0 | <img src="README.assets\image-20221205214218434.png" alt="image-20221205214218434" style="zoom:67%;" /> |
+|    Ⅳ区(180°≤θ≤240°)     | 0→1→3→7→7→3→1→0 | <img src="README.assets\image-20221205214236690.png" alt="image-20221205214236690" style="zoom:67%;" /> |
+|    Ⅴ区(240°≤θ≤300°)     | 0→1→5→7→7→5→1→0 | <img src="README.assets\image-20221205214255778.png" alt="image-20221205214255778" style="zoom:67%;" /> |
+|    Ⅵ区(300°≤θ≤360°)     | 0→4→5→7→7→5→4→0 | <img src="README.assets\image-20221205214311499.png" alt="image-20221205214311499" style="zoom:67%;" /> |
 
 
 
@@ -363,9 +363,9 @@ $$
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | 扇区 |  Ⅰ   |  Ⅱ   |  Ⅲ   |  Ⅳ   |  Ⅴ   |  Ⅵ   |
 
-<img src=".\README.assets\image-20221205221336870.png" alt="image-20221205221336870" style="zoom:67%;" />
+<img src="README.assets\image-20221205221336870.png" alt="image-20221205221336870" style="zoom:67%;" />
 
-<img src=".\README.assets\image-20221206121314617.png" alt="image-20221206121314617" style="zoom: 67%;" />
+<img src="README.assets\image-20221206121314617.png" alt="image-20221206121314617" style="zoom: 67%;" />
 
 ```c
 void Sector_cal(void)
@@ -380,7 +380,7 @@ void Sector_cal(void)
 
 
 
-<img src=".\README.assets\image-20221206102731904.png" alt="image-20221206102731904" style="zoom:80%;" />
+<img src="README.assets\image-20221206102731904.png" alt="image-20221206102731904" style="zoom:80%;" />
 
 $$
 \begin{cases}
@@ -404,7 +404,7 @@ Z=\frac{\sqrt{3}T_s}{2U_{dc}}(-\sqrt{3}u_\alpha+u_\beta)
 \end{cases}
 $$
 
-<img src=".\README.assets\image-20221206121352481.png" alt="image-20221206121352481" style="zoom:67%;" />
+<img src="README.assets\image-20221206121352481.png" alt="image-20221206121352481" style="zoom:67%;" />
 
 
 | 扇区          | Ⅰ    | Ⅱ    | Ⅲ    | Ⅳ    | Ⅴ    | Ⅵ    |
@@ -444,7 +444,7 @@ $$
 
 
 
-<img src=".\README.assets\image-20221206121420940.png" alt="image-20221206121420940" style="zoom: 50%;" />
+<img src="README.assets\image-20221206121420940.png" alt="image-20221206121420940" style="zoom: 50%;" />
 
 
 
@@ -506,7 +506,7 @@ $$
 | T<sub>cm2</sub> | T<sub>b</sub> | T<sub>a</sub> | T<sub>a</sub> | T<sub>b</sub> | T<sub>c</sub> | T<sub>c</sub> |
 | T<sub>cm3</sub> | T<sub>c</sub> | T<sub>c</sub> | T<sub>b</sub> | T<sub>a</sub> | T<sub>a</sub> | T<sub>b</sub> |
 
-<img src=".\README.assets\image-20221206121452363.png" alt="image-20221206121452363" style="zoom: 67%;" />
+<img src="README.assets\image-20221206121452363.png" alt="image-20221206121452363" style="zoom: 67%;" />
 
 ```c
 void Tcm_cal(void)
@@ -608,7 +608,7 @@ $$
 
 
 
-<img src=".\README.assets\image-20221206175333122.png" alt="image-20221206175333122" style="zoom:80%;" />
+<img src="README.assets\image-20221206175333122.png" alt="image-20221206175333122" style="zoom:80%;" />
 
 
 ```c
@@ -694,7 +694,7 @@ $$
 
 
 
-<img src=".\README.assets\image-20221206202847141.png" alt="image-20221206202847141" style="zoom:80%;" />
+<img src="README.assets\image-20221206202847141.png" alt="image-20221206202847141" style="zoom:80%;" />
 
 
 
@@ -764,7 +764,7 @@ T_q=\frac{L_q}{R}
 $$
 
 
-<img src=".\README.assets\image-20221206212947960.png" alt="image-20221206212947960" style="zoom:67%;" />
+<img src="README.assets\image-20221206212947960.png" alt="image-20221206212947960" style="zoom:67%;" />
 
 
 ```c
