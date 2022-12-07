@@ -360,9 +360,9 @@ $$
 | T<sub>5</sub> | 0    | 0    | 0    | 0    | -Z   | -X   |
 | T<sub>6</sub> | X    | Y    | 0    | 0    | 0    | 0    |
 
-设任意扇区中两个非零矢量作用时间为T<sup>`</sup>和T<sup>``</sup>
+设任意扇区中两个非零矢量作用时间为T<sup>'</sup>和T<sup>''</sup>
 
-| T<sub>0</sub>(T<sub>7</sub>) | (T<sub>s</sub>-T<sup>`</sup>-T<sup>``</sup>)/2 |
+| T<sub>0</sub>(T<sub>7</sub>) | (T<sub>s</sub>-T<sup>'</sup>-T<sup>''</sup>)/2 |
 | --------------- | ------------------------ |
 
 ```c
