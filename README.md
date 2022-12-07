@@ -11,7 +11,13 @@
 ### 自然坐标系->α-β坐标系(Clark变换)
 
 $$
-[f_α~f_β~f_0]^T=T_{3S/2S}[f_A~f_B~f_C]^T
+\begin{bmatrix}
+f_α&f_β&f_0
+\end{bmatrix}^T
+=T_{3S/2S}
+\begin{bmatrix}
+f_A&f_B&f_C
+\end{bmatrix}^T
 $$
 
 f代表电机的电压、电流或磁链等变量；T<sub>3s/2s</sub>为坐标变换矩阵
