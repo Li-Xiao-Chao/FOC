@@ -256,7 +256,11 @@ U_2=\frac{T_6}{T_s}U_6
 T_4,T_6,T_0-U_4,U_6和零矢量U_0或U_7的作用时间
 $$
 
-![image-20221205204109307](.\README.assets\image-20221205204109307.png)
+
+
+<img src=".\README.assets\image-20221205204109307.png" alt="image-20221205204109307" style="zoom:80%;" />
+
+
 $$
 |U_4|=|U_6|=\frac{2}{3}U_{dc}\\
 |U_{out}|=U_m\\
@@ -327,8 +331,7 @@ void Sector_cal(void)
 
 
 
-![image-20221206102731904](.\README.assets\image-20221206102731904.png)
-
+<img src=".\README.assets\image-20221206102731904.png" alt="image-20221206102731904" style="zoom:80%;" />
 
 $$
 \begin{cases}
@@ -551,11 +554,7 @@ K_{i\omega}=\beta K_{p\omega}
 \end{cases}
 $$
 
-
-
-![](.\README.assets\image-20221206175333122.png)
-
-
+<img src=".\README.assets\image-20221206175333122.png" alt="image-20221206175333122" style="zoom:80%;" />
 
 
 ```c
