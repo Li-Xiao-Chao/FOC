@@ -595,7 +595,7 @@ $$
 若采用传统的PI调节器，则转速环控制器的表达式：
 
 $$
-i^{*}_{q}=(K_{p\omega}+\frac{K_{i\omega}}{s})(\omega^{*}_{m}-\omega_m)-B_a\omega_m
+i^{\ast}_{q}=(K_{p\omega}+\frac{K_{i\omega}}{s})(\omega^{\ast}_{m}-\omega_m)-B_a\omega_m
 $$
 
 $$
