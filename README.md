@@ -78,11 +78,11 @@ static void Anti_Clark_cal(void)
 ### α-β坐标系->d-q坐标系（Park变换）
 
 $$
-\begin{bmatrix}f_d&f_q\end{bmatrix}^T=T_{2S/2r}\begin{bmatrix}f_\alpha&f_\beta\end{bmatrix}^T
+\begin{bmatrix}f_d&f_q\end{bmatrix}^T=T_{2s/2r}\begin{bmatrix}f_\alpha&f_\beta\end{bmatrix}^T
 $$
 
 $$
-T_{2S/2r}=\begin{bmatrix} cos\theta_e & sin\theta_e \\ -sin\theta_e & cos\theta_e \\ \end{bmatrix}
+T_{2S/2r}=\begin{bmatrix} cos\theta_e & sin\theta_e \\\\ -sin\theta_e & cos\theta_e \end{bmatrix}
 $$
 
 <img src=".\README.assets\image-20221205101922158.png" alt="image-20221205101922158" style="zoom:67%;" />
@@ -102,7 +102,7 @@ $$
 $$
 
 $$
-T_{2r/2s}=T^{-1}_{2s/2r}=\begin{bmatrix} cos\theta_e & -sin\theta_e \\ sin\theta_e & cos\theta_e \\ \end{bmatrix}
+T_{2r/2s}=T^{-1}_{2s/2r}=\begin{bmatrix} cos\theta_e & -sin\theta_e \\\\ sin\theta_e & cos\theta_e \end{bmatrix}
 $$
 
 <img src=".\README.assets\image-20221205102139385.png" alt="image-20221205102139385" style="zoom:67%;" />
@@ -204,24 +204,26 @@ $$
 
 
 $$
-U_{out}=u_a+au_b+a^2u_c\\
+U_{out}=u_a+au_b+a^2u_c\\\\
 \begin{cases}
 Re~U_{out}=u_a+u_bcos\frac{2}{3}\pi+u_ccos(-\frac{2}{3}\pi)=\frac{3}{2}U_msin\omega t\\
 Im~U_{out}=u_bsin\frac{2}{3}\pi+u_csin(-\frac{2}{3}\pi)=-\frac{3}{2}U_mcos\omega t
-\end{cases}\\
+\end{cases}\\\\
 U_{out}=Re~U_{out}+jIm~U_{out}=\frac{3}{2}U_me^{j(\omega t-\frac{\pi}{2})}
 $$
 
 
 <img src=".\README.assets\image-20221205115404283.png" alt="image-20221205115404283" style="zoom:67%;" />
+
 $$
-U_{out}=\frac{2U_{dc}}{3}(s_a+s_be^{-j\frac{2}{3}\pi}+s_ce^{-j\frac{2}{3}\pi})\\
+U_{out}=\frac{2U_{dc}}{3}(s_a+s_be^{-j\frac{2}{3}\pi}+s_ce^{-j\frac{2}{3}\pi})\\\\
 \begin{cases}
-V_{AN}=\frac{U_{dc}}{3}(2s_a-s_b-s_c)\\
-V_{BN}=\frac{U_{dc}}{3}(2s_b-s_a-s_c)\\
+V_{AN}=\frac{U_{dc}}{3}(2s_a-s_b-s_c)\\\\
+V_{BN}=\frac{U_{dc}}{3}(2s_b-s_a-s_c)\\\\
 V_{CN}=\frac{U_{dc}}{3}(2s_c-s_a-s_b)
 \end{cases}
 $$
+
 
 | s<sub>a</sub> | s<sub>b</sub> | s<sub>c</sub> |   V<sub>AN</sub>   |   V<sub>BN</sub>   |   V<sub>CN</sub>   | V<sub>ab</sub>  | V<sub>bc</sub>  | V<sub>ca</sub>  |          U<sub>out</sub>           |
 | :-----------: | :-----------: | :-----------: | :----------------: | :----------------: | :----------------: | :-------------: | :-------------: | :-------------: | :--------------------------------: |
@@ -243,6 +245,7 @@ $$
 平衡等效原则：在一个开关周期T<sub>s</sub>内通过对基本电压矢量加以组合，使其平均值与给定电压矢量相等。
 
 以扇区Ⅰ为例：
+
 $$
 T_sU_{out}=T_4U_4+T_6U_6+T_0(U_0或U_7)\\
 T_4+T_6+T_0=T_S\\
@@ -252,6 +255,7 @@ U_2=\frac{T_6}{T_s}U_6
 \end{cases}\\
 T_4,T_6,T_0-U_4,U_6和零矢量U_0或U_7的作用时间
 $$
+
 ![image-20221205204109307](.\README.assets\image-20221205204109307.png)
 $$
 |U_4|=|U_6|=\frac{2}{3}U_{dc}\\
@@ -264,6 +268,7 @@ T_0=T_7=\frac{1}{2}(T_s-T_4-T_6)
 SVPWM调制比M=\frac{\sqrt{3}U_m}{U_{dc}}\\
 |U_{out}|=U_m\leqslant\frac{2U_{dc}}{3},即M_{max}=\frac{2}{\sqrt{3}}=1.1547
 $$
+
 SVPWM调制中，调制深度最大值可以达到1.1547，比SPWM调制最高所能达到的调制比1高0.1547，这使其直流母线电压利用率更高。
 
 | U<sub>out</sub>所在位置 |  开关切换顺序   |                          三相波形图                          |
@@ -282,6 +287,7 @@ SVPWM调制中，调制深度最大值可以达到1.1547，比SPWM调制最高�
 ### 扇区判断
 
 判断电压空间矢量U<sub>out</sub>所在扇区的目的是确定本开关周期所使用的基本电压空间矢量。用u<sub>α</sub>和u<sub>β</sub>表示参考电压矢量U<sub>out</sub>在α-β轴上的分量，定义U<sub>ref1</sub>、U<sub>ref2</sub>和U<sub>ref3</sub>三个变量。
+
 $$
 \begin{cases}
 U_{ref1}=u_\beta\\
@@ -289,6 +295,7 @@ U_{ref2}=\frac{\sqrt{3}}{2}u_\alpha-\frac{1}{2}u_\beta\\
 U_{ref3}=-\frac{\sqrt{3}}{2}u_\alpha-\frac{1}{2}u_\beta
 \end{cases}
 $$
+
 再定义三个变量A、B、C，通过分析可以得出：
 
 若U<sub>ref1</sub>>0，则A=1，否则A=0；
@@ -332,6 +339,7 @@ T_6=\frac{\sqrt{3}T_s}{2U_{dc}}u_\beta
 $$
 
 同理，分析其他扇区各矢量作用时间，可得：
+
 $$
 \begin{cases}
 X=\frac{\sqrt{3}T_sU_\beta}{U_{dc}}\\
@@ -367,6 +375,7 @@ void XYZ_step(void)
 ```
 
 如果T<sup>`</sup>+T<sup>``</sup>>T<sub>s</sub>，则需进行过调制处理：
+
 $$
 \begin{cases}
 T^`=\frac{T^`}{T^`+T^{``}}T_s\\
@@ -484,6 +493,7 @@ void Tcm_cal(void)
 ### 转速环
 
 三相PMSM电机运动方程：
+
 $$
 \begin{cases}
 J\frac{d\omega_m}{dt}=T_e-T_L-B\omega_m\\
@@ -493,22 +503,32 @@ $$
 ω<sub>m</sub>-电机的机械角速度；J-转动惯量；B-阻尼系数；T<sub>L</sub>-负载转矩
 
 定义有功阻尼：
+
 $$
 i_q=i^`_q-B_a\omega_m
 $$
+
 采用i<sup>*</sup><sub>d</sub>=0的控制策略，并假定电机在空载(T<sub>L</sub>=0)情况下启动：
+
 $$
 \frac{d\omega_m}{dt}=\frac{1.5p_n\psi_f}{J}(i^`_q-B_a\omega_m)-\frac{B}{J}\omega_m
+
 $$
+
 将上式的极点配置到期望的闭环带宽β，可以得到转速相对于q轴电流的传递函数为：
+
 $$
 \omega_m(s)=\frac{1.5p_n\psi_f/J}{s+\beta}i^`_q(s)
 $$
+
 得有功系数B<sub>a</sub>：
+
 $$
 B_a=\frac{\beta J-B}{1.5p_n\psi_f}
 $$
+
 若采用传统的PI调节器，则转速环控制器的表达式：
+
 $$
 i^*_q=(K_{p\omega}+\frac{K_{i\omega}}{s})(\omega^*_m-\omega_m)-B_a\omega_m\\
 \Longrightarrow
@@ -517,6 +537,7 @@ K_{p\omega}=\frac{\beta J}{1.5p_n\psi_f}\\
 K_{i\omega}=\beta K_{p\omega}
 \end{cases}
 $$
+
 ![image-20221206175333122](.\README.assets\image-20221206175333122.png)
 
 ```c
@@ -546,38 +567,47 @@ void Speed_PI(void)
 ### 电流环
 
 重写d-q坐标系下的电流方程：
+
 $$
 \begin{cases}
 \frac{d}{dt}i_d=-\frac{R}{L_d}i_d+\frac{L_q}{L_d}\omega_ei_q+\frac{1}{L_d}u_d\\
 \frac{d}{dt}i_q=-\frac{R}{L_d}i_d-\frac{1}{L_q}\omega_e(L_di_d+\psi_f)+\frac{1}{L_q}u_q
 \end{cases}
 $$
+
 定子电流i<sub>d</sub>，i<sub>q</sub>分别在q轴和d轴方向产生交叉耦合电动势。
 
 若i<sub>d</sub>，i<sub>q</sub>完全解耦，可得：
+
 $$
 \begin{cases}
 u_{d0}=u_d+\omega_eL_qi_q=Ri_d+L_d\frac{d}{dt}i_d\\
 u_{q0}=u_q-\omega_e(L_di_d+\psi_f)=Ri_q+L_q\frac{d}{dt}i_q
 \end{cases}
 $$
+
 其中，u<sub>d0</sub>和u<sub>q0</sub>分别为电流解耦后的d轴和q轴电压
 
 对上式进行拉普拉斯变换：
+
 $$
 \pmb{Y}(s)=\pmb{G}(s)\pmb{U}(s)\\
 \pmb{U}(s)=\begin{bmatrix}u_{d0}(s)\\u_{q0}(s)\end{bmatrix},\pmb{Y}(s)=\begin{bmatrix}i_d(s)\\i_q(s)\end{bmatrix},	\pmb{G}(s)=\begin{bmatrix}R+sL_d&0\\0&R+sL_q\end{bmatrix}^{-1}
 $$
+
 采用常规的PI调节器并结合前馈解耦控制策略，可得到d-q轴的电压：
+
 $$
 \begin{cases}
 v^*_d=(K_{pd}+\frac{K_{id}}{s})(i^*_d-i_d)-\omega_eL_qi_q\\
 u^*_q=(K_{pq}+\frac{K_{id}}{s})(i^*_q-i_q)+\omega_e(L_di_d+\psi_f)
 \end{cases}
 $$
+
 其中，K<sub>pd</sub>和K<sub>pd</sub>为控制器的比例增益，K<sub>id</sub>和K<sub>id</sub>为PI控制器的控制增益
 
 内模控制框图：
+
 $$
 \pmb{G}(s)为内模，\pmb{G}(s)为被控对象，\pmb{C}(s)为内模控制器
 $$
@@ -585,25 +615,34 @@ $$
 ![image-20221206202847141](.\README.assets\image-20221206202847141.png)
 
 其等效控制器为：
+
 $$
 \pmb{F}(s)=[\pmb{I}-\pmb{C}(s)\hat{\pmb{G}}(s)]^{-1}\pmb{C}(s)
 $$
+
 如果内模建模精确，即
+
 $$
 \pmb{\hat{G}}(s)=\pmb{G}(s)
 $$
+
 则系统不存在反馈环节，此时系统传递函数为：
+
 $$
 \pmb{G}_c(s)=\pmb{G}(s)\pmb{C}(s)
 $$
+
 要保证系统稳定，当且只有当**G**(s)和**C**(s)稳定
 
 由于电机的电磁时间常数比机械时间常数小得多，控制系统的电流环可近似看作一阶系统
+
 $$
 根据\pmb{\hat{G}}(s)=\pmb{G}(s)，定义\pmb{C}(s)=\pmb{\hat{G}}^{-1}(s)\pmb{L}(s)=\pmb{G}^{-1}(s)\pmb{L}(s)\\
 其中：\pmb{L}(s)=\alpha\pmb{I}(s+\alpha)，\alpha为设计参数
 $$
+
 内模控制器：
+
 $$
 \pmb{F}(s)=\alpha\begin{bmatrix}L_d+\frac{R}{s}&0\\0&L_q+\frac{R}{s}\end{bmatrix}\\
 \pmb{G}_c(s)=\frac{\alpha}{s+\alpha}\pmb{I}
@@ -619,6 +658,7 @@ K_{iq}=\alpha R
 $$
 
 定义响应时间t<sub>res</sub>为系统响应从阶跃的10%~90%所需的时间，则α与t<sub>res</sub>的关系近似为t<sub>res</sub>=ln9/α。由α与t<sub>res</sub>的关系可知，减小α将延长系统响应时间，增大α将加快系统响应速度，但α不能无限增大，实际中系统响应时间受电气时间常数的限制，电机的时间常数为：
+
 $$
 \begin{cases}
 T_d=\frac{L_d}{R}\\
