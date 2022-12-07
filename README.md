@@ -25,8 +25,17 @@ f代表电机的电压、电流或磁链等变量；T<sub>3s/2s</sub>为坐标�
 
 $$
 T_{3S/2S}=k\begin{bmatrix} 1 & -\frac{1}{2} & -\frac{1}{2} \\\\ 0 & \frac{\sqrt{3}}{2} & -\frac{\sqrt{3}}{2} \\\\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} &\frac{\sqrt{2}}{2} \end{bmatrix}\\\\
-幅值不变k=\frac{2}{3}\\\\
-功率不变k=\sqrt{\frac{2}{3}}\\\\
+$$
+
+$$
+幅值不变k=\frac{2}{3}
+$$
+
+$$
+功率不变k=\sqrt{\frac{2}{3}}
+$$
+
+$$
 三相对称系统，静止坐标系中f_0可忽略
 $$
 
@@ -153,7 +162,13 @@ $$
 
 $$
 u_d、u_q-定子电压的d-q轴分量；i_d、i_q-定子电流的d-q轴分量；\\
-R-定子的电阻；\psi_d、\psi_q-定子磁链的d-q轴分量；\omega_e-电角速度；\\
+$$
+
+$$
+R-定子的电阻；\psi_d、\psi_q-定子磁链的d-q轴分量；\omega_e-电角速度；
+$$
+
+$$
 L_d、L_q-d-q轴电感电量；\psi_f-永磁体磁链
 $$
 
@@ -204,25 +219,37 @@ $$
 
 
 $$
-U_{out}=u_a+au_b+a^2u_c\\\\
+U_{out}=u_a+au_b+a^2u_c
+$$
+
+$$
 \begin{cases}
 Re~U_{out}=u_a+u_bcos\frac{2}{3}\pi+u_ccos(-\frac{2}{3}\pi)=\frac{3}{2}U_msin\omega t\\
 Im~U_{out}=u_bsin\frac{2}{3}\pi+u_csin(-\frac{2}{3}\pi)=-\frac{3}{2}U_mcos\omega t
-\end{cases}\\\\
+\end{cases}
+$$
+
+$$
 U_{out}=Re~U_{out}+jIm~U_{out}=\frac{3}{2}U_me^{j(\omega t-\frac{\pi}{2})}
 $$
 
 
+
 <img src=".\README.assets\image-20221205115404283.png" alt="image-20221205115404283" style="zoom:67%;" />
 
+
 $$
-U_{out}=\frac{2U_{dc}}{3}(s_a+s_be^{-j\frac{2}{3}\pi}+s_ce^{-j\frac{2}{3}\pi})\\\\
+U_{out}=\frac{2U_{dc}}{3}(s_a+s_be^{-j\frac{2}{3}\pi}+s_ce^{-j\frac{2}{3}\pi})
+$$
+
+$$
 \begin{cases}
 V_{AN}=\frac{U_{dc}}{3}(2s_a-s_b-s_c)\\\\
 V_{BN}=\frac{U_{dc}}{3}(2s_b-s_a-s_c)\\\\
 V_{CN}=\frac{U_{dc}}{3}(2s_c-s_a-s_b)
 \end{cases}
 $$
+
 
 
 | s<sub>a</sub> | s<sub>b</sub> | s<sub>c</sub> |   V<sub>AN</sub>   |   V<sub>BN</sub>   |   V<sub>CN</sub>   | V<sub>ab</sub>  | V<sub>bc</sub>  | V<sub>ca</sub>  |          U<sub>out</sub>           |
@@ -247,12 +274,21 @@ $$
 以扇区Ⅰ为例：
 
 $$
-T_sU_{out}=T_4U_4+T_6U_6+T_0(U_0或U_7)\\
-T_4+T_6+T_0=T_S\\
+T_sU_{out}=T_4U_4+T_6U_6+T_0(U_0或U_7)
+$$
+
+$$
+T_4+T_6+T_0=T_S
+$$
+
+$$
 \begin{cases}
 U_1=\frac{T_4}{T_s}U_4\\
 U_2=\frac{T_6}{T_s}U_6
-\end{cases}\\
+\end{cases}
+$$
+
+$$
 T_4,T_6,T_0-U_4,U_6和零矢量U_0或U_7的作用时间
 $$
 
@@ -260,18 +296,31 @@ $$
 
 <img src=".\README.assets\image-20221205204109307.png" alt="image-20221205204109307" style="zoom:80%;" />
 
-
 $$
 |U_4|=|U_6|=\frac{2}{3}U_{dc}\\
-|U_{out}|=U_m\\
+$$
+
+$$
+|U_{out}|=U_m\
+$$
+
+$$
 \begin{cases}
 T_4=\sqrt{3}\frac{U_m}{U_{dc}}T_ssin(\frac{\pi}{3}-\theta)\\
 T_6=\sqrt{3}\frac{U_m}{U_{dc}}T_ssin\theta\\
 T_0=T_7=\frac{1}{2}(T_s-T_4-T_6)
-\end{cases}\\
-SVPWM调制比M=\frac{\sqrt{3}U_m}{U_{dc}}\\
+\end{cases}
+$$
+
+$$
+SVPWM调制比M=\frac{\sqrt{3}U_m}{U_{dc}}
+$$
+
+$$
 |U_{out}|=U_m\leqslant\frac{2U_{dc}}{3},即M_{max}=\frac{2}{\sqrt{3}}=1.1547
 $$
+
+
 
 SVPWM调制中，调制深度最大值可以达到1.1547，比SPWM调制最高所能达到的调制比1高0.1547，这使其直流母线电压利用率更高。
 
@@ -546,13 +595,18 @@ $$
 若采用传统的PI调节器，则转速环控制器的表达式：
 
 $$
-i^*_q=(K_{p\omega}+\frac{K_{i\omega}}{s})(\omega^*_m-\omega_m)-B_a\omega_m\\
+i^*_q=(K_{p\omega}+\frac{K_{i\omega}}{s})(\omega^*_m-\omega_m)-B_a\omega_m
+$$
+
+$$
 \Longrightarrow
 \begin{cases}
 K_{p\omega}=\frac{\beta J}{1.5p_n\psi_f}\\
 K_{i\omega}=\beta K_{p\omega}
 \end{cases}
 $$
+
+
 
 <img src=".\README.assets\image-20221206175333122.png" alt="image-20221206175333122" style="zoom:80%;" />
 
@@ -608,12 +662,16 @@ $$
 对上式进行拉普拉斯变换：
 
 $$
-\pmb{Y}(s)=\pmb{G}(s)\pmb{U}(s)\\
+\pmb{Y}(s)=\pmb{G}(s)\pmb{U}(s)
+$$
+
+$$
 \pmb{U}(s)=\begin{bmatrix}u_{d0}(s)\\\\u_{q0}(s)\end{bmatrix},\pmb{Y}(s)=\begin{bmatrix}i_d(s)\\\\i_q(s)\end{bmatrix},\pmb{G}(s)=\begin{bmatrix}R+sL_d&0\\\\0&R+sL_q\end{bmatrix}^{-1}
 $$
 
-采用常规的PI调节器并结合前馈解耦控制策略，可得到d-q轴的电压：
 
+
+采用常规的PI调节器并结合前馈解耦控制策略，可得到d-q轴的电压：
 $$
 \begin{cases}
 v^*_d=(K_{pd}+\frac{K_{id}}{s})(i^*_d-i_d)-\omega_eL_qi_q\\
@@ -656,16 +714,24 @@ $$
 由于电机的电磁时间常数比机械时间常数小得多，控制系统的电流环可近似看作一阶系统
 
 $$
-根据\pmb{\hat{G}}(s)=\pmb{G}(s)，定义\pmb{C}(s)=\pmb{\hat{G}}^{-1}(s)\pmb{L}(s)=\pmb{G}^{-1}(s)\pmb{L}(s)\\
+根据\pmb{\hat{G}}(s)=\pmb{G}(s)，定义\pmb{C}(s)=\pmb{\hat{G}}^{-1}(s)\pmb{L}(s)=\pmb{G}^{-1}(s)\pmb{L}(s)
+$$
+
+$$
 其中：\pmb{L}(s)=\alpha\pmb{I}(s+\alpha)，\alpha为设计参数
 $$
 
+
+
 内模控制器：
+$$
+\pmb{F}(s)=\alpha\begin{bmatrix}L_d+\frac{R}{s}&0\\\\0&L_q+\frac{R}{s}\end{bmatrix}
+$$
 
 $$
-\pmb{F}(s)=\alpha\begin{bmatrix}L_d+\frac{R}{s}&0\\\\0&L_q+\frac{R}{s}\end{bmatrix}\\
 \pmb{G}_c(s)=\frac{\alpha}{s+\alpha}\pmb{I}
 $$
+
 
 $$
 \begin{cases}
