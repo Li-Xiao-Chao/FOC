@@ -686,7 +686,6 @@ $$
 其中，K<sub>pd</sub>和K<sub>pd</sub>为控制器的比例增益，K<sub>id</sub>和K<sub>id</sub>为PI控制器的控制增益
 
 内模控制框图：
-
 $$
 \pmb{G}(s)为内模，\pmb{G}(s)为被控对象，\pmb{C}(s)为内模控制器
 $$
@@ -703,6 +702,8 @@ $$
 
 
 如果内模建模精确，即
+
+
 $$
 \pmb{\hat{G}}(s)=\pmb{G}(s)
 $$
@@ -728,6 +729,8 @@ $$
 
 
 内模控制器：
+
+
 $$
 \pmb{F}(s)=\alpha\begin{bmatrix}L_d+\frac{R}{s}&0\\\\0&L_q+\frac{R}{s}\end{bmatrix}
 $$
