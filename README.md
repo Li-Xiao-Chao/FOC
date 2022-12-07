@@ -630,19 +630,18 @@ $$
 \pmb{G}(s)为内模，\pmb{G}(s)为被控对象，\pmb{C}(s)为内模控制器
 $$
 
-
-
-![](.\README.assets\image-20221206202847141.png)
-
-![](.\README.assets\image-20221206202847141.png)
+<img src=".\README.assets\image-20221206202847141.png" alt="image-20221206202847141" style="zoom:80%;" />
 
 其等效控制器为：
+
+
 $$
 \pmb{F}(s)=\begin{bmatrix}\pmb{I}-\pmb{C}(s)\hat{\pmb{G}}(s)\end{bmatrix}^{-1}\pmb{C}(s)
 $$
 
-如果内模建模精确，即
 
+
+如果内模建模精确，即
 $$
 \pmb{\hat{G}}(s)=\pmb{G}(s)
 $$
