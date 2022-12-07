@@ -1,7 +1,3 @@
----
-typora-copy-images-to: ./README.assets
----
-
 # 双闭环FOC
 
 参考自《现代永磁同步电机控制原理及MATLAB仿真》袁雷编著
