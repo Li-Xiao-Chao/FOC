@@ -378,7 +378,7 @@ void XYZ_step(void)
 
 $$
 \begin{cases}
-T^'=\frac{T^'}{T^'+T^{''}}T_s\\
+T^'=\frac{T^'}{T^'+T^{''}}T_s\\\\
 T^{''}=\frac{T^{''}}{T^'+T^{''}}T_s
 \end{cases}
 $$
