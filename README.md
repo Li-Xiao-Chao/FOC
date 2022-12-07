@@ -674,8 +674,8 @@ $$
 采用常规的PI调节器并结合前馈解耦控制策略，可得到d-q轴的电压：
 $$
 \begin{cases}
-v^*_d=(K_{pd}+\frac{K_{id}}{s})(i^*_d-i_d)-\omega_eL_qi_q\\
-u^*_q=(K_{pq}+\frac{K_{id}}{s})(i^*_q-i_q)+\omega_e(L_di_d+\psi_f)
+v^{\ast}_d=(K_{pd}+\frac{K_{id}}{s})(i^{\ast}_d-i_d)-\omega_eL_qi_q\\
+u^{\ast}_q=(K_{pq}+\frac{K_{id}}{s})(i^{\ast}_q-i_q)+\omega_e(L_di_d+\psi_f)
 \end{cases}
 $$
 
