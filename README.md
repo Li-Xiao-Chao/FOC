@@ -24,9 +24,9 @@ f代表电机的电压、电流或磁链等变量；T<sub>3s/2s</sub>为坐标�
 
 
 $$
-T_{3S/2S}=k\begin{bmatrix} 1 & -\frac{1}{2} & -\frac{1}{2} \\ 0 & \frac{\sqrt{3}}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} &\frac{\sqrt{2}}{2} \\ \end{bmatrix}\\\\
-幅值不变k=\frac{2}{3}\\\\
-功率不变k=\sqrt{\frac{2}{3}}\\\\
+T_{3S/2S}=k\begin{bmatrix} 1 & -\frac{1}{2} & -\frac{1}{2} \\ 0 & \frac{\sqrt{3}}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} &\frac{\sqrt{2}}{2} \\ \end{bmatrix}\\
+幅值不变k=\frac{2}{3}\\
+功率不变k=\sqrt{\frac{2}{3}}\\
 三相对称系统，静止坐标系中f_0可忽略
 $$
 
@@ -49,7 +49,7 @@ void Clark_cal(void)
 ### α-β坐标系->自然坐标系(反Clark变换)
 
 $$
-[f_A~f_B~f_C]^T~=~T_{2S/3S}~[f_α~f_β~f_0]^T
+\begin{bmatrix}f_A&f_B&f_C\end{bmatrix}^T=T_{3S/2S}\begin{bmatrix}f_\alpha&f_\beta&f_0\end{bmatrix}^T
 $$
 
 T<sub>2s/3s</sub>为坐标变换矩阵
@@ -78,7 +78,7 @@ static void Anti_Clark_cal(void)
 ### α-β坐标系->d-q坐标系（Park变换）
 
 $$
-[f_d~f_q]^T~=~T_{2S/2r}~[f_α~f_β]^T
+\begin{bmatrix}f_d&f_q\end{bmatrix}^T=T_{2S/2r}\begin{bmatrix}f_\alpha&f_\beta\end{bmatrix}^T
 $$
 
 $$
@@ -98,7 +98,7 @@ void Plark_cal(void)
 ### d-q坐标系->α-β坐标系（反Park变换）
 
 $$
-[f_\alpha~f_\beta]^T~=~T_{2r/2s}~[f_d~f_q]^T
+\begin{bmatrix}f_\alpha&f_\beta\end{bmatrix}^T=T_{2r/2s}\begin{bmatrix}f_d&f_q\end{bmatrix}^T
 $$
 
 $$
