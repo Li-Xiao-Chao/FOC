@@ -553,7 +553,7 @@ $$
 
 
 
-![image-20221206175333122](.\README.assets\image-20221206175333122.png)
+![](.\README.assets\image-20221206175333122.png)
 
 
 
@@ -632,13 +632,13 @@ $$
 
 
 
-![image-20221206202847141](.\README.assets\image-20221206202847141.png)
+![](.\README.assets\image-20221206202847141.png)
 
-
+![](.\README.assets\image-20221206202847141.png)
 
 其等效控制器为：
 $$
-\pmb{F}(s)=[\pmb{I}-\pmb{C}(s)\hat{\pmb{G}}(s)]^{-1}\pmb{C}(s)
+\pmb{F}(s)=\begin{bmatrix}\pmb{I}-\pmb{C}(s)\hat{\pmb{G}}(s)\end{bmatrix}^{-1}\pmb{C}(s)
 $$
 
 如果内模建模精确，即
